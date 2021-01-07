@@ -32,3 +32,5 @@ with open(path) as csv_file:
     for row in csv_reader:
         total += int(row[1])
     print(f"Total: ${total}")
+
+    print(total)
