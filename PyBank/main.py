@@ -41,7 +41,7 @@ print(f"Greatest Increase in Profits: {mmax} (${vmax})")
 print(f"Greatest Decrease in Profits: {mmin} (${vmin})")
 print(f"```")
 
-sys.stdout = open('output.txt', 'wt')
+sys.stdout = open('output3.txt', 'wt') 
 print(f"```text")
 print(f"Financial Analysis")
 print(f"----------------------------")
@@ -53,6 +53,24 @@ print(f"Greatest Decrease in Profits: {mmin} (${vmin})")
 print(f"```")
 
 
+sys.stdout = open('/Users/keri.ROGUE/Desktop/python-challenge/PyBank/analysis/output.txt', 'wt') 
+print(f"```text")
+print(f"Financial Analysis")
+print(f"----------------------------")
+print(f"Total Months: {total_months}")
+print(f"Total$: ${total_amount}")
+print(f"Average Change: ${average_change_decimal}")
+print(f"Greatest Increase in Profits: {mmax} (${vmax})")
+print(f"Greatest Decrease in Profits: {mmin} (${vmin})")
+print(f"```")
+
+# with open("~keri.ROGUE/Desktop/python-challenge/PyBank/analysis/output5.txt", 'w') as txt:
+#     txt.writelines('Hello!')
+
+# c://users/keri.ROGUE/Desktop/python-challenge/PyBank/analysis
+
+# c://users/keri.ROGUE/Desktop/python-challenge/PyBank/analysis
+# output5.txt", 'w') 
 
 
 
