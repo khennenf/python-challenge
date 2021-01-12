@@ -19,24 +19,54 @@ total_months = len(c1)
 total_amount = sum(c2int)
 months_average = total_months - 1
 diff_list = []
-#Get difference between months
+for i in range(1,len(c2int)):
+    x = c2int[i] - c2int[i-1]
+    diff_list.append(x)
+# print(diff_list)
+# print(sum(diff_list))
+# print(max(diff_list))
+# print(min(diff_list))
+res = {} 
+for month in c1: 
+    for values in diff_list: 
+        res[month] = values 
+        diff_list.remove(values) 
+        break  
+# print ("Resultant dictionary is : " +  str(res)) 
+# print(max([i for i in res.values()]))
+# print(max(res.items(), key=lambda x: x[1]))
+# print(min(res.items(), key=lambda x: x[1]))
+# minvalue = (min(res.items(), key=lambda x: x[1]))
+# print(minvalue)
+# minlist = list(minvalue)
+# for x in minlist:
+#     for y in minlist:
+#         print(x, y)
+# print(minlist)
+# print(f" The amount is {x}")
+# print(f" The month is {y}")
+print(f"Greatest Increase in Profits: {(min(res.items(), key=lambda x: x[1]))}")
+# minvalue = (min(res.items(), key=lambda x: x[1]))
+# print(minvalue)
+diff_list = []
+# #Get difference between months
 for i in range(1,len(c2int)):
     x = c2int[i] - c2int[i-1]
     diff_list.append(x)
 sum_month_change = sum(diff_list)
-#delete first row
-c1.pop(0)
-#create dict of items
-valuesdict = {} 
-for month in c1: 
-    for values in diff_list: 
-        valuesdict[month] = values 
-        diff_list.remove(values) 
+# #delete first row
+c1.pop(1)
+# # #create dict of items
+# print(diff_list)
+valuesdict = dict(zip(c1, diff_list))
 minvalue = (min(valuesdict.items(), key=lambda x: x[1]))
 maxvalue = (max(valuesdict.items(), key=lambda x: x[1]))
+# print(minvalue)
 mmax, vmax  = maxvalue
 mmin, vmin = minvalue
+# print(minvalue)
 average_change = sum_month_change/months_average
+# print(average_change)
 average_change_decimal = round(average_change, 2) 
 print(f"```text")
 print(f"Financial Analysis")
@@ -58,10 +88,6 @@ print(f"Average Change: ${average_change_decimal}")
 print(f"Greatest Increase in Profits: {mmax} (${vmax})")
 print(f"Greatest Decrease in Profits: {mmin} (${vmin})")
 print(f"```")
-
-
-
-
 
 
 
